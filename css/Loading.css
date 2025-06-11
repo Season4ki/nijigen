@@ -35,3 +35,21 @@
         transform: scale(0.2);
     }
 }
+
+/* 手机端适配 */
+@media screen and (max-width: 768px) {
+    .load .dot {
+        width: 15px;
+        height: 15px;
+        margin: 15px 0 0 15px;
+    }
+}
+
+/* 小屏手机适配 */
+@media screen and (max-width: 480px) {
+    .load .dot {
+        width: 12px;
+        height: 12px;
+        margin: 12px 0 0 12px;
+    }
+}
