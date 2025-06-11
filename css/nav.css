@@ -1,3 +1,4 @@
+/* ==== nav.css 响应式更新 ==== */
 @charset "utf-8";
 body{
     margin: 0;
@@ -8,7 +9,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1540px;
+    width: 100vw; /* 改为100vw适应所有屏幕 */
     height: 70px;
     top: 0px;
     background-color: rgb(123, 161, 197);
@@ -90,5 +91,51 @@ nav .none{
     }100%{
         top: 0px;
         opacity: 0.8;
+    }
+}
+
+/* 手机端导航适配 */
+@media screen and (max-width: 768px) {
+    nav {
+        height: 60px;
+        font-size: 14px;
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+    
+    nav .navtitle {
+        padding-left: 10px;
+        width: 100%;
+        text-align: center;
+        order: -1;
+    }
+    
+    nav .navtitle strong {
+        font-size: 24px;
+    }
+    
+    nav a {
+        width: 80px;
+        font-size: 12px;
+        line-height: 60px;
+    }
+    
+    /* 隐藏动画效果，改为简单的hover效果 */
+    nav .navanim {
+        display: none;
+    }
+    
+    nav a:hover {
+        background-color: rgba(155, 200, 240, 0.5);
+        border-radius: 5px;
+    }
+    
+    /* 重新排列导航位置 */
+    nav .home,
+    nav .about,
+    nav .blog,
+    nav .album,
+    nav .join {
+        position: static;
     }
 }
