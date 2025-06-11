@@ -150,7 +150,6 @@
     position: absolute;
 }
 
-
 @keyframes a1{
     to{
         transform: rotate(360deg);
@@ -158,8 +157,7 @@
 }
 @keyframes a2{
     to{
-        transform: rotate(-10800deg
-        );
+        transform: rotate(-10800deg);
     }
 }
 @keyframes loadbac{
@@ -170,5 +168,115 @@
     100%{
         opacity: 1;
         margin-top: 50px;
+    }
+}
+
+/* 手机端适配 */
+@media screen and (max-width: 768px) {
+    .joinpart {
+        width: 95vw;
+        height: auto;
+        min-height: 90vh;
+        flex-direction: column;
+        background-size: cover;
+        border-radius: 20px;
+        padding: 20px 0;
+    }
+    
+    .joinpart .left {
+        width: 100%;
+        height: auto;
+        order: 2;
+    }
+    
+    .joinpart .left .square {
+        width: 150px;
+        height: 150px;
+        margin-top: 50px;
+        border-width: 3px;
+    }
+    
+    .left .square::before,
+    .left .square::after {
+        width: 150px;
+        height: 150px;
+        border-width: 3px;
+    }
+    
+    .left .tit {
+        font-size: 1.2em;
+        margin-left: 75px;
+        margin-top: -100px;
+    }
+    
+    .joinpart .right {
+        width: 100%;
+        height: auto;
+        order: 1;
+        padding: 0 20px;
+    }
+    
+    .joinpart .goal {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .joinpart .goal h1 {
+        font-size: 2.5em;
+        line-height: 1.2;
+    }
+    
+    .joinpart .goal p {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    
+    .meth {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .meth .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon ul {
+        width: 120px;
+        margin-left: -60px;
+        font-size: 12px;
+    }
+}
+
+/* 小屏手机适配 */
+@media screen and (max-width: 480px) {
+    .joinpart .goal h1 {
+        font-size: 2em;
+    }
+    
+    .joinpart .left .square {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .left .square::before,
+    .left .square::after {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .left .tit {
+        font-size: 1em;
+        margin-left: 60px;
+        margin-top: -80px;
+    }
+    
+    .meth .icon {
+        width: 35px;
+        height: 35px;
     }
 }
