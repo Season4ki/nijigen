@@ -1,3 +1,4 @@
+/* ==== body.css 响应式更新 ==== */
 @charset "utf-8";
 body{
     margin: 0;
@@ -35,4 +36,21 @@ body{
 .foot p{
     line-height: 10px;
     color: rgb(28, 43, 43);
+}
+
+/* 手机端适配 */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* 手机上fixed可能有问题 */
+    }
+    
+    .foot {
+        height: 80px;
+        font-size: 12px;
+    }
+    
+    .foot p {
+        line-height: 8px;
+        padding: 0 10px;
+    }
 }
