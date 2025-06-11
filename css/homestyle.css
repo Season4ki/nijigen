@@ -4,19 +4,21 @@
     background-image: url("../image/head2.jpeg");
     height: 100vh;
     background-repeat: no-repeat;
-    background-size: 1540px;
+    background-size: cover; /* 改为cover以适应不同屏幕 */
     background-attachment: fixed;
+    background-position: center; /* 居中显示 */
     width: 100vw;
     transition: 0.5s ease 0s;
     animation: load 0.5s;
 }
 
 .titleimg .title{
-    width: 1540px;
-    padding:200px;
+    width: 100%;
+    padding: 200px 20px; /* 添加左右padding */
     font-size: 100px;
     font-weight: bolder;
     color: rgba(49, 70, 87,0.9);
+    text-align: center; /* 居中对齐 */
 }
 
 .main{
@@ -87,7 +89,6 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    
 }
 
 .pt .txt h1{
@@ -103,6 +104,7 @@
     word-wrap: break-word;
     color: rgb(114, 182, 202);
 }
+
 @keyframes load{
     0%{
         background-position-y: 50px;
@@ -111,5 +113,61 @@
     100%{
         background-position-y: 0px;
         opacity: 1;
+    }
+}
+
+/* 手机端首页适配 */
+@media screen and (max-width: 768px) {
+    .titleimg {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    
+    .titleimg .title {
+        padding: 100px 20px;
+        font-size: 48px;
+        line-height: 1.2;
+    }
+    
+    .sec {
+        padding: 20px;
+    }
+    
+    .pt {
+        width: calc(100% - 40px);
+        height: 400px;
+        margin: 20px 20px;
+        float: none;
+    }
+    
+    .pt .img {
+        width: 100%;
+        height: 150px;
+        background-position: center;
+    }
+    
+    .pt .txt {
+        width: calc(100% - 40px);
+        height: 250px;
+        padding: 0 20px;
+    }
+    
+    .pt .txt h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+    .pt .txt p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    /* 取消hover效果，改为touch友好 */
+    .pt:hover {
+        transform: none;
+    }
+    
+    .pt:active {
+        transform: scale(0.98);
     }
 }
