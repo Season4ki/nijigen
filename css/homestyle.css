@@ -4,7 +4,7 @@
     background-image: url("../image/head2.jpeg");
     height: 100vh;
     background-repeat: no-repeat;
-    background-size: 1540px;
+    background-size: cover;
     background-attachment: fixed;
     width: 100vw;
     transition: 0.5s ease 0s;
@@ -12,9 +12,9 @@
 }
 
 .titleimg .title{
-    width: 1540px;
-    padding:200px;
-    font-size: 100px;
+    width: 100%;
+    padding:50px 20px;
+    font-size: 8vw;
     font-weight: bolder;
     color: rgba(49, 70, 87,0.9);
 }
@@ -35,10 +35,11 @@
 .pt{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 250px;
-    float: left;
-    margin: 150px 0px 0px 105px;
+    height: auto;
+    width: 90vw;
+    max-width:300px;
+    float: none;
+    margin: 20px auto;
     background: rgba(219, 235, 241,0.8);
     box-shadow: 0 0 15px rgb(59, 73, 95);
     border-radius: 15px;
@@ -69,7 +70,7 @@
 
 .pt .img{
     height: 190px;
-    width: 250px;
+    width: 100%;
     background-size: cover;
     background-position: 0px -30px;
     transition: all 0.5s ease 0s;
@@ -82,7 +83,7 @@
 
 .pt .txt{
     height: 310px;
-    width: 200px;
+    width: 90%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
