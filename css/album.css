@@ -1,7 +1,9 @@
+/* ==== album.css 响应式更新 ==== */
 @charset "utf-8";
 .mid{
     height: 100vh;
     width: 100vw;
+    padding-top: 80px;
 }
 
 .banner{
@@ -14,6 +16,7 @@
     bottom: 0;
     right: 0;
     width: 1150px;
+    max-width: 90%;
     height: 421px;
     animation: imgload1 1s linear;
 }
@@ -29,13 +32,14 @@
 .banner img{
     transition: all .5s;
     filter: grayscale(0.5);
+    width: 100%;
+    height: auto;
 }
 
 .banner img:hover{
     transform: scale(1.1);
     filter: grayscale(0);
 }
-
 
 .banner div{
     width: 20px;
@@ -54,5 +58,40 @@
     }100%{
         opacity: 1;
         margin-top: 170px;
+    }
+}
+
+/* 手机端相册适配 */
+@media screen and (max-width: 768px) {
+    .mid {
+        padding-top: 60px;
+    }
+    
+    .banner {
+        width: 95%;
+        height: auto;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    
+    .banner li {
+        position: static;
+        float: none;
+        width: 100%;
+    }
+    
+    .banner img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .banner div {
+        display: none; /* 隐藏装饰元素 */
     }
 }
